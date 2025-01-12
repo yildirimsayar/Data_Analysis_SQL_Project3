@@ -16,7 +16,7 @@ ROW_NUMBER() OVER(PARTITION BY show_id,type
                   ,title,director,cast) AS Duplicates
 FROM netflix_dup;
 
-WITH CTE_Dup AS   -- There is no duplicates
+WITH CTE_Dup AS   -- There are no duplicates
 (
 SELECT*,
 ROW_NUMBER() OVER(PARTITION BY show_id,type
